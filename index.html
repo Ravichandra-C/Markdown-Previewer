@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link href="css/main.css" rel='stylesheet'>
+        <title>Markdown Converter</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.2/marked.js" integrity="sha512-ACFtZ4JVtwlaerUVywIeKmP2BPkp8xUZYIyRBiDxa0dv48r9itDPqjXmGNycnqWcS3YtWofx1XYt5DjAE4/eqQ==" crossorigin="anonymous"></script>
+        <script src='https://cdn.jsdelivr.net/npm/dompurify@2.0.12/dist/purify.min.js' crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+        <div class='container'>
+            <div class='headers'>
+                <h1>Markdown Converter</h1>
+            </div>
+            <div class='workarea'> 
+                <div id="editor"><textarea id='editor_text' placeholder="# Marked in the browser\n\nRendered by **marked**."></textarea></div>
+                <div id="preview"></div>
+            </div>
+        </div>
+    </body>
+    <script>
+        
+        document.addEventListener("DOMContentLoaded",convertText)
+        editor_text.addEventListener("change",convertText)
+        editor_text.addEventListener("keydown",convertText);
+        function convertText(){
+            preview.innerHTML= marked(editor_text.value);
+        }
+    </script>
+</html>
