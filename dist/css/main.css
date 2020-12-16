@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+}
+.container .headers h1 {
+  margin: auto;
+  width: max-content;
+}
+.container .workarea {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: row;
+}
+.container .workarea #editor, .container .workarea #preview {
+  flex-grow: 1;
+  padding: 5px;
+  flex-basis: 50%;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+#editor_text {
+  width: 100%;
+  height: 100%;
+  border: 0px;
+}
+
+/*# sourceMappingURL=main.css.map */
